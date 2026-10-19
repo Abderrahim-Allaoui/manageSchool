@@ -1,66 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<img src="public/img/header.png" alt="manageSchool" width="820">
 
-## About Laravel
+# 🏫 manageSchool
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Application de gestion scolaire — Students · Teachers · Admins · Library**
+**School management application — Students · Teachers · Admins · Library**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![Laravel](https://img.shields.io/badge/Laravel-10-FF2D20?logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.1-777BB4?logo=php&logoColor=white)](https://php.net)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com)
+[![Vite](https://img.shields.io/badge/Vite-4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](https://mysql.com)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</div>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🇫🇷 Présentation (Français)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Application web de **gestion scolaire** développée en Laravel 10. Elle permet
+d'administrer quatre modules via des opérations CRUD complètes :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| Module | Fonctionnalités |
+| --- | --- |
+| 🎓 **Élèves** (`students`) | Nom, email, téléphone, section, photo — liste, création, détail, édition, suppression |
+| 👨‍🏫 **Enseignants** (`teachers`) | Nom, prénom, email unique, mot de passe — CRUD complet |
+| 🛡️ **Administrateurs** (`admins`) | Nom, email, mot de passe, rôle (`admin` / `teacher` / `student`), remember token |
+| 📚 **Bibliothèque** (`books`) | Titre, auteur, ISBN, éditeur, année, nombre d'exemplaires — gestion du stock |
 
-## Laravel Sponsors
+L'interface (Blade + Bootstrap 5 + Vite) part d'une page d'accueil en mosaïque :
+chaque module est accessible en un clic, avec des pages de listage, de création
+et d'édition.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**Projet de formation** — ENSA Kénitra, Génie Logiciel & Systèmes d'Information.
 
-### Premium Partners
+## 🇬🇧 Overview (English)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+A **school management** web app built with Laravel 10 — full CRUD over four
+domains: students, teachers, administrators and a library catalogue.
+Blade templates + Bootstrap 5 (Vite), MySQL database, MVC structure.
 
-## Contributing
+**Training project** — ENSA Kénitra, Software Engineering & Information Systems.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🧰 Stack technique
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+| Layer | Technologies |
+| --- | --- |
+| Framework | Laravel 10 (MVC, Eloquent ORM, Blade) |
+| Language | PHP 8.1 |
+| Front-end | Blade templates · Bootstrap 5 · Sass · Vite 4 |
+| Base de données | MySQL / MariaDB (Eloquent migrations) |
+| Auth | Laravel Sanctum · `rememberToken` sur les administrateurs |
+| Qualité | PHPUnit · Laravel Pint · Faker (factories & seeders) |
 
-## Security Vulnerabilities
+## 🚀 Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git clone https://github.com/Abderrahim-Allaoui/manageSchool.git
+cd manageSchool
 
-## License
+composer install
+npm install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+cp .env.example .env
+php artisan key:generate
+
+# configure la base de données dans .env, puis :
+php artisan migrate
+php artisan db:seed        # facultatif : données de démonstration
+
+npm run dev                 # Vite (dev assets)
+php artisan serve           # → http://localhost:8000
+```
+
+## 📁 Structure
+
+```
+app/Http/Controllers/     AdminController · BookController · StudentController · TeacherController
+database/migrations/      students · teachers · admins · books
+resources/views/
+├── home.blade.php        page d'accueil en mosaïque
+├── layout.blade.php      template de base
+├── students/ teachers/ admins/ books/   vues CRUD (index, create, edit, show)
+public/img/               icônes et visuels des modules
+routes/web.php            routes REST + routes explicites par ressource
+```
+
+## 📌 À noter
+
+- Les routes sont déclarées en `Route::resource(...)` **et** explicitement, pour
+  garder un contrôle précis sur les URLs (`/students/{id}/edit`, etc.).
+- Les profils administrateurs portent un `role` (`admin`, `teacher`, `student`),
+  prêt pour une extension d'authentification et de contrôle d'accès.
+- Le module `books` gère le nombre d'exemplaires — base d'un futur
+  système d'emprunt/retour.
+
+## 👤 Auteur
+
+**Abderrahim Allaoui** — Génie Logiciel & Systèmes d'Information, ENSA Kénitra 🇲🇦
+[github.com/Abderrahim-Allaoui](https://github.com/Abderrahim-Allaoui)
+
+---
+
+<div align="center">
+<sub>Built with Laravel · Bootstrap · Vite — ENSA Kénitra</sub>
+</div>
